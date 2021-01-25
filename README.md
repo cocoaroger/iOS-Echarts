@@ -1,4 +1,6 @@
-# iOS- Echarts - A control build with echarts  
+# iOS- Echarts - A control build with echarts 
+删除 UIWebView 相关关键字, Demo 中由于使用大量 PYEchartsView, 所以运行会没有效果.
+
 [中文文档](https://github.com/Pluto-Y/iOS-Echarts/tree/master/Doc) 
 
 [![Build Status](https://travis-ci.org/Pluto-Y/iOS-Echarts.svg)](https://travis-ci.org/Pluto-Y/iOS-Echarts)  [![CocoaPods Compatible](https://img.shields.io/cocoapods/v/iOS-Echarts.svg)](https://img.shields.io/cocoapods/v/iOS-Echarts.svg)

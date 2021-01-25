@@ -7,6 +7,7 @@
 //
 
 @class PYEchartsView;
+#import <WebKit/WebKit.h>
 
 @protocol PYEchartsViewDelegate <NSObject>
 
