@@ -278,6 +278,12 @@
 #pragma mark WKNavigationDelegate
 - (void)webView:(WKWebView *)webView didFinishNavigation:(WKNavigation *)navigation {
     __weak __typeof(self) weakSelf = self;
+    NSString *injectionJSString = @"var script = document.createElement('meta');"
+        "script.name = 'viewport';"
+        "script.content=\"width=device-width, user-scalable=no\";"
+        "document.getElementsByTagName('head')[0].appendChild(script);";
+    [webView evaluateJavaScript:injectionJSString completionHandler:nil];
+    
     [webView evaluateJavaScript:@"document.readyState" completionHandler:^(id result, NSError *error) {
         // object has fully loaded.
         __typeof(self) strongSelf = weakSelf;
